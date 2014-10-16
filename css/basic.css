@@ -1,13 +1,12 @@
 /* Denna fil får du editera för att lösa uppgiften. Du får INTE ändra i html-filen. */
-
-/*Rest CSS */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
+/* Color picker: http://html-color-codes.info/colors-from-image/ */
+
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -26,114 +25,183 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    background-color: #ffffff;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: times new roman;
+	font-weight: normal;
+}
 
-/* De stora blocken */
+p {
+    font-family:Verdana;
+}
+
+div {
+
+	padding: 5px;
+	vertical-align: baseline;
+    background-color: #eae7d2;
+}
+
+ul li {
+    list-style: none;
+    float: left;
+}
+
+img {
+   float: left;
+   padding-right: 5px;
+   
+}
+
 #container {
-    margin: 10px auto;
-    width:643px;
-    
+    width: 600px;
+    height: 640px;
+    margin: 0 auto;
+    border: solid 1px #cecab9;
+    padding: 0px;
 }
 
 #topbar {
-    height:223px;
-    background-color:#4f463c;
-    background-image:url(pics/coffey.jpg);
-    background-position:bottom;
-    background-repeat:no-repeat;
-    font-family:Verdana;
-    font-size:12px;
-    font-weight:italic;
-    color:#fff;
-    text-align:right;
-    padding:5px;
-    margin-top:10px;
+    width:600px;
+    height:218px;
+    background-color: #51473d;
+    background-image: url("pics/coffey.jpg");
+    background-repeat: no-repeat;
+    background-position:bottom; 
+    color: #eae7d2;
+    font-style: italic;
+    font-size: 10px;
+    font-family: Verdana;
+    text-align: right;
+    padding: 0px;
+    
 }
 
 #menu {
-    width:100%;
-    height:50px;
-    background-color:#4f463c;
+    width:590px;
+    height:34px;
+    background-color: #51473d;
+    margin-left: 0px;
+  
     
 }
-#menu ul {
-margin:1px;
 
+#menu > a {
+    display: none !important;
 }
 
-#menu li {
-display: inline;
-list-style: none;
-margin-left:10px;
-}
-#menu li a {
-width:115px; 
-height:32px;
-background-color:#786f66;
-margin: 0 1px 0 0;
-padding: 5px 5px 0px 5px;
-text-align: center;
-font-family: Verdana;
-font-size:12px;
-}
-#meny li a:hover {
-
+#menu > ul li {
+    
+    background-color: transparent;
+    margin-right: 1px;
+    padding-top: 8px;
 }
 
-#menu li a:active { 
-color: rgba(250,191,12,1);
+#menu a {
+     
+    text-transform: capitalize; 
+    color: #eae7d2;
+    background-color: #797066;    
+    font-family: verdana;
+    font-size: 12px;
+    border-top:1px solid #827b72;
+    text-decoration: none;
+    padding: 10px;
 }
 
-#menu #maincontent {
-    display:none;
+#menu li.active a {
+    border:none;
+    background-color: #eae7d2;
+    color: #797066;
+    text-decoration: none;
+    
+   
+    
 }
 
-
-#content {
-    background-color:#e8e5d1;
+#menu a:hover {
+    background-color: #9c9084;
+    text-decoration: none;
+    padding:10px;
 }
 
 #maincontent {
-    width:300px;
-    float:left;
-    background-color:#e8e5d1;
+    float: left;
+    width: 350px;
+    overflow: hidden;
+    background-color: #e8e5d1;
+    color: #786f66;
+    margin-right: 10px;
+    margin-top:10px;
+    border-right: dashed 1px;
+}
+
+#maincontent p {
+    font-size: 12px;
+    line-height:20px;
+}
+
+#maincontent h1 {
+    font-size: 28px;
+    margin-top: 5px;
 }
 
 #subcontent {
-    width:234px;
-    float:right;
-     background-color:#e8e5d1;
+    float: right;
+    overflow: hidden;
+    width: 190px;
+    background-color: #e8e5d1;
+    color: #786f66;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+#subcontent p {
+    font-size: 10px;
+    line-height:16px;
+}
+
+#subcontent h1 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#subcontent h2 {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+#subcontent ul li {
+    padding: inherit;
+    margin-top: -5px;
+    margin-left: 0px;
+}
+
+#subcontent a, li a {
+    text-decoration: underline;
+    font-family: verdana;
+    font-size: 12px;
+    color: inherit;
 }
 
 #bottomcontent {
     clear:both;
-     background-color:#e8e5d1;
+    float: left;
+    font-family: Verdana;
+    font-style: italic;
+    font-size: 10px;
+    margin-top: -8px;
+    margin-left: 0px;
+    background-color: #eae7d2;
+    color: #797066;
 }
-
-/* Klasser */
-
-.active {}
-
